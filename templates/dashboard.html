@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trình quản lý cấu hình Prometheus - Bảng điều khiển</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container-fluid {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            border-bottom: 4px solid #007bff;
+        }
+        .container-fluid ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .container-fluid ul li {
+            padding: 0 20px;
+        }
+        .container-fluid ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .container-fluid ul li a:hover {
+            color: #007bff;
+        }
+        .container {
+            padding: 20px;
+        }
+        h2, h3 {
+            text-align: center;
+            color: #333;
+        }
+        footer {
+            margin-top: 30px;
+            text-align: center;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Bảng Điều Khiển</strong></li>
+        </ul>
+        <ul>
+            <li><a href="/add_config">Thêm cấu hình</a></li>
+            <li><a href="/view_config">Xem cấu hình</a></li>
+            <li><a href="/delete_config">Xóa cấu hình</a></li>
+            <li><a href="/logout" role="button">Đăng xuất</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="grid">
+            <section>
+                <hgroup>
+                    <h2>Chào mừng bạn đến với Trình quản lý cấu hình Prometheus</h2>
+                    <h3>Bảng Điều Khiển</h3>
+            </section>
+        </div>
+    </main>
+    <footer class="container">
+        <small><a href="#">Điều khoản sử dụng</a> • <a href="#">Chính sách bảo mật</a></small>
+    </footer>
+</body>
+</html>

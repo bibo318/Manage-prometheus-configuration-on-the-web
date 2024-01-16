@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thêm cấu hình</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        function addLabelField() {
+            var container = document.getElementById("additional-labels");
+            var inputHTML = '<div class="label-field-pair"><input type="text" name="additional_label_name[]" placeholder="Additional Label Name"><input type="text" name="additional_label_value[]" placeholder="Additional Label Value"></div>';
+            container.innerHTML += inputHTML;
+        }
+    </script>
+    <style>
+        .form-section {
+            margin-top: 20px;
+        }
+        .form-section input, .form-section select, .label-field-pair input {
+            margin-bottom: 10px;
+            width: 48%;
+        }
+        .label-field-pair {
+            display: flex;
+            justify-content: space-between;
+        }
+        #additional-labels {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Thêm cấu hình</strong></li>
+        </ul>
+        <ul>
+            <li><a href="/dashboard" style="text-decoration: none; color: white; background-color: #007bff; padding: 5px 10px; border-radius: 4px;">Quay Lại Bảng Điều Khiển</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="grid">
+            <section class="form-section">
+                <hgroup>
+                    <h2>Thêm cấu hình mới</h2>
+                    <h3>Nhập chi tiết bên dưới</h3>
+                </hgroup>
+                {% if message %}
+                    <p>{{ message }}</p>
+                {% endif %}
+                <form method="POST" action="/add_config">
+                    <label for="selected_job">Chọn job:</label>
+                    <select name="selected_job">
+                        {% for job, path in job_paths.items() %}
+                            <option value="{{ job }}">{{ job }}</option>
+                        {% endfor %}
+                    </select><br>
+                    Targets (được phân tách bằng dấu phẩy): <input type="text" name="targets" placeholder="e.g., 192.168.1.1:9090, 192.168.1.2:9090"><br>
+                    <div class="label-field-pair">
+                        <input type="text" name="hostgroup_value" value="{{ request.form.hostgroup_value|default('hostgroup') }}">
+                        <input type="text" name="hostgroup_custom" placeholder="Custom value">
+                    </div>
+                    <div class="label-field-pair">
+                        <input type="text" name="service_value" value="{{ request.form.service_value|default('service') }}">
+                        <input type="text" name="service_custom" placeholder="Custom value">
+                    </div>
+                    <div class="label-field-pair">
+                        <input type="text" name="tool_value" value="{{ request.form.tool_value|default('tool') }}">
+                        <input type="text" name="tool_custom" placeholder="Custom value">
+                    </div>
+                    <div class="label-field-pair">
+                        <input type="text" name="jobs_value" value="{{ request.form.jobs_value|default('jobs') }}">
+                        <input type="text" name="jobs_custom" placeholder="Custom value">
+                    </div>
+                    <div id="additional-labels"></div>
+                    <button type="button" onclick="addLabelField()">Thêm nhãn</button><br>
+                    <input type="submit" value="Lưu">
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer class="container">
+        <small><a href="#">Điều khoản sử dụng</a> • <a href="#">sách bảo mật</a></small>
+    </footer>
+</body>
+</html>
