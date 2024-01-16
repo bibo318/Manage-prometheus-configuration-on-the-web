@@ -18,6 +18,8 @@ Dự án này là một ứng dụng web được xây dựng bằng Flask, hỗ
 - **Flask**: Framework chính cho ứng dụng web.
 - **Werkzeug**: Được sử dụng cho bảo mật và hash mật khẩu.
 - **HTML/CSS**: Để tạo giao diện người dùng trong thư mục `templates`.
-
+## Login
+User: admin
+Pass: admin
 Dự án này phù hợp cho việc quản lý cấu hình trong các hệ thống nhỏ hoặc dùng làm cơ sở để phát triển các ứng dụng quản lý phức tạp hơn.
 - **Lưu ý**: Phải thay đổi các đường dẫn tới file cấu hình.
