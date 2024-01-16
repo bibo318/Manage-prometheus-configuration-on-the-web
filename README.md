@@ -6,7 +6,11 @@ Dự án này là một ứng dụng web được xây dựng bằng Flask, hỗ
 
 - **Quản Lý Cấu Hình**: Cho phép người dùng thêm và quản lý các cấu hình hệ thống qua giao diện web.
 - **Xác Thực Người Dùng**: Đảm bảo an toàn thông tin với chức năng đăng nhập và xác thực.
+  ![Ảnh ví dụ](Images/01.jpg)
 - **Giao Diện Trực Quan**: Giao diện dễ sử dụng, với các chức năng như thêm, xóa, và xem cấu hình được tích hợp sẵn.
+ ![Ảnh ví dụ](Images/02.jpg)
+ ![Ảnh ví dụ](Images/03.jpg)
+ ![Ảnh ví dụ](Images/04.jpg) 
 - **Tạo Hash Mật Khẩu**: `passgen.py` hỗ trợ tạo hash cho mật khẩu, tăng cường bảo mật cho ứng dụng.
 
 ## Công Nghệ Sử Dụng
@@ -16,3 +20,4 @@ Dự án này là một ứng dụng web được xây dựng bằng Flask, hỗ
 - **HTML/CSS**: Để tạo giao diện người dùng trong thư mục `templates`.
 
 Dự án này phù hợp cho việc quản lý cấu hình trong các hệ thống nhỏ hoặc dùng làm cơ sở để phát triển các ứng dụng quản lý phức tạp hơn.
+- **Lưu ý**: Phải thay đổi các đường dẫn tới file cấu hình.
