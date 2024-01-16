@@ -6,11 +6,11 @@ Dự án này là một ứng dụng web được xây dựng bằng Flask, hỗ
 
 - **Quản Lý Cấu Hình**: Cho phép người dùng thêm và quản lý các cấu hình hệ thống qua giao diện web.
 - **Xác Thực Người Dùng**: Đảm bảo an toàn thông tin với chức năng đăng nhập và xác thực.
-  ![Ảnh ví dụ](Images/01.jpg)
+  ![Ảnh ví dụ](https://raw.githubusercontent.com/bibo318/Manage-prometheus-configuration-on-the-web/main/Images/01.png)
 - **Giao Diện Trực Quan**: Giao diện dễ sử dụng, với các chức năng như thêm, xóa, và xem cấu hình được tích hợp sẵn.
- ![Ảnh ví dụ](Images/02.jpg)
- ![Ảnh ví dụ](Images/03.jpg)
- ![Ảnh ví dụ](Images/04.jpg) 
+ ![Ảnh ví dụ](https://raw.githubusercontent.com/bibo318/Manage-prometheus-configuration-on-the-web/main/Images/02.png)
+ ![Ảnh ví dụ](https://raw.githubusercontent.com/bibo318/Manage-prometheus-configuration-on-the-web/main/Images/03.png)
+ ![Ảnh ví dụ](https://raw.githubusercontent.com/bibo318/Manage-prometheus-configuration-on-the-web/main/Images/04.png)
 - **Tạo Hash Mật Khẩu**: `passgen.py` hỗ trợ tạo hash cho mật khẩu, tăng cường bảo mật cho ứng dụng.
 
 ## Công Nghệ Sử Dụng
